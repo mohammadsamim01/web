@@ -8,6 +8,45 @@
     <title>Table in html</title>
 </head>
 <style>
+        nav {
+            width: 95%;
+            margin: 20px auto;
+            background: #dedede;
+            box-shadow: 2px 2px 8px #aaa;
+        }
+
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            flex: 1 1 auto;
+            text-align: center;
+            padding: 18px 12px;
+            background: #dedede;
+            transition: 0.3s;
+        }
+
+        nav ul li:hover {
+            background: #050358;
+        }
+
+        nav ul li a {
+            display: block;
+            color: #111;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        nav ul li:hover a {
+            color: white;
+        }
     body {
         margin: 0px;
         padding: 0px;
@@ -27,7 +66,7 @@
         box-shadow: 2px 2px 2px rgb(26, 25, 25);
     }
 
-    fooder {
+    footer {
         background:black;
         color:white;
         font-size:20px;
@@ -72,9 +111,6 @@
     /* Large devices (laptops/desktops, 992px and up) */
 
     @media only screen and (min-width: 992px) {
-        body {
-
-            / background-color:red;
         }
 
         header {
@@ -136,7 +172,7 @@
 <nav>
         <ul>
             <li><a href="index4.html">Home</a></li>
-            <li><a href="photogellre.html">Photo Gellre</a></li>
+            <li><a href="photogellre.html">Photo Gellery</a></li>
             <li><a href="Table.html.html">Table Mark</a></li>
             <li><a href="list.html.">List</a></li>
             <li><a href="secnede.html">about me</a></li>
@@ -195,6 +231,7 @@
         </table>
     </main>
 </body>
-<fooder>All Right reserved &reg;</fooder>
+
+<footer>All Right reserved &reg;</footer>
 
 </html>

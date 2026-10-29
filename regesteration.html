@@ -1,0 +1,254 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: #f2f2f2;
+            font-family: Arial, sans-serif;
+        }
+
+        .topheader {
+            width: 100%;
+            background: rgb(9, 3, 33);
+            box-shadow: 0 4px 10px gray;
+            font-size: 36px;
+            padding: 20px;
+            color: white;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        main {
+            width: 95%;
+            max-width: 750px;
+            margin: 30px auto;
+        }
+
+        table {
+            width: 100%;
+            border: 1px solid black;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 5px 5px 15px #bbb;
+            background: white;
+            border-spacing: 8px;
+        }
+
+        caption {
+            font-size: 28px;
+            color: blue;
+            font-weight: bold;
+            padding: 15px;
+        }
+
+        td {
+            padding: 8px;
+            vertical-align: top;
+        }
+
+        td:first-child {
+            width: 35%;
+            font-weight: bold;
+        }
+
+        input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="reset"]),
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin: 8px 5px 8px 0;
+        }
+
+        input[type="file"] {
+            max-width: 100%;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            background: rgb(25, 130, 199);
+            color: white;
+            border: none;
+            padding: 12px 22px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background: #050358;
+        }
+
+        .buttons {
+            text-align: center;
+        }
+
+        /* Responsive design */
+        @media screen and (max-width: 600px) {
+            .topheader {
+                font-size: 27px;
+                padding: 18px 10px;
+            }
+
+            main {
+                width: 96%;
+                margin: 15px auto;
+            }
+
+            table {
+                padding: 8px;
+                border-spacing: 3px;
+            }
+
+            caption {
+                font-size: 23px;
+            }
+
+            td {
+                padding: 6px 3px;
+            }
+
+            td:first-child {
+                width: 32%;
+            }
+
+            input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="reset"]),
+            select,
+            textarea {
+                font-size: 14px;
+                padding: 8px;
+            }
+
+            .buttons input {
+                margin: 5px 2px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="topheader">Form in HTML</div>
+
+    <main>
+        <form method="post" action="">
+
+            <table>
+                <caption>Registration Form</caption>
+
+                <tr>
+                    <td><label for="fname">First Name</label></td>
+                    <td>
+                        <input type="text" id="fname" name="fname"
+                               placeholder="Type name..." required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="lname">Last Name</label></td>
+                    <td>
+                        <input type="text" id="lname" name="lname"
+                               placeholder="Type last name..." required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="age">Age</label></td>
+                    <td>
+                        <input type="number" id="age" name="age"
+                               min="18" max="30" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="dob">DOB</label></td>
+                    <td><input type="date" id="dob" name="dob"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="time">Time</label></td>
+                    <td><input type="time" id="time" name="time"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="about">About Me</label></td>
+                    <td>
+                        <textarea id="about" name="about"
+                                  rows="5" placeholder="Write about yourself..."></textarea>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Gender</td>
+                    <td>
+                        <label><input type="radio" name="gender" value="Male" required> Male</label><br>
+                        <label><input type="radio" name="gender" value="Female"> Female</label><br>
+                        <label><input type="radio" name="gender" value="Others"> Others</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Hobby</td>
+                    <td>
+                        <label><input type="checkbox" name="hobby" value="Reading"> Reading</label><br>
+                        <label><input type="checkbox" name="hobby" value="Writing"> Writing</label><br>
+                        <label><input type="checkbox" name="hobby" value="Dancing"> Dancing</label><br>
+                        <label><input type="checkbox" name="hobby" value="Cooking"> Cooking</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="city">City</label></td>
+                    <td>
+                        <select id="city" name="city">
+                            <option value="">Select City</option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Bombay">Mumbai</option>
+                            <option value="Calcutta">Kolkata</option>
+                            <option value="Madras">pune</option>
+                            <option value="Bangalore">Bangalore</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="upload">Upload File</label></td>
+                    <td><input type="file" id="upload" name="upload"></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" class="buttons">
+                        <input type="submit" value="Register">
+                        <input type="reset" value="Reset">
+                    </td>
+                </tr>
+
+            </table>
+        </form>
+    </main>
+
+</body>
+</html>
