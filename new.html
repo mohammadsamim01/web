@@ -1,63 +1,142 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <title>My Practice</title>
 
-<body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="photosgallery.html">Photo Gallery</a></li>
-            <li><a href="table.html">Table</a></li>
-            <li><a href="list.html">List</a></li>
-            <li><a href="https://www.behance.net/mohammadsamimx">Portfolio</a></li>
-        </ul>
-    </nav>
     <style>
-        nav {
-            width: 95%;
-            margin: 20px auto;
-            background: #dedede;
-            box-shadow: 2px 2px 8px #aaa;
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f1f3f8;
+            color: #222;
+        }
+
+        header {
+            background: #050358;
+            color: #FEF3E2;
+            text-align: center;
+            padding: 30px;
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        main {
+            width: 90%;
+            max-width: 850px;
+            margin: 40px auto;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .intro h2 {
+            color: #050358;
+            font-size: 28px;
+        }
+
+        .intro p {
+            color: #666;
         }
 
         nav ul {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
             list-style: none;
             padding: 0;
             margin: 0;
         }
 
-        nav ul li {
-            flex: 1 1 auto;
-            text-align: center;
-            padding: 18px 12px;
-            background: #dedede;
+        nav li {
+            background: white;
+            border: 2px solid #050358;
+            border-radius: 10px;
+            overflow: hidden;
             transition: 0.3s;
         }
 
-        nav ul li:hover {
+        nav li:hover {
             background: #050358;
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px #bbb;
         }
 
-        nav ul li a {
+        nav a {
             display: block;
-            color: #111;
+            padding: 25px;
+            text-align: center;
             text-decoration: none;
-            font-size: 16px;
+            color: #050358;
+            font-size: 18px;
+            font-weight: bold;
         }
 
-        nav ul li:hover a {
+        nav li:hover a {
             color: white;
         }
-    </style>
-</body>
 
+        footer {
+            background: #050358;
+            color: #FEF3E2;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                font-size: 28px;
+                padding: 20px;
+            }
+
+            nav ul {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            nav a {
+                padding: 20px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>My Practice</header>
+
+    <main>
+        <div class="intro">
+            <h2>Explore My Work</h2>
+            <p>Choose a page to explore my HTML practice projects.</p>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index1.html">Home</a></li>
+                <li><a href="photosgallery.html">Photo Gallery</a></li>
+                <li><a href="table.html">Tables</a></li>
+                <li><a href="list.html">Lists</a></li>
+                <li><a href="regesteration.html">Registration Form</a></li>
+                <li><a href="login.html">Login Page</a></li>
+                <li><a href="login.html">Login Page</a></li>
+            </ul>
+        </nav>
+    </main>
+
+    <footer>
+        © 2026 My Practice Website
+    </footer>
+
+</body>
 </html>

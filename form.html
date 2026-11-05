@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form in HTML</title>
+    <link href="mainform.css" rel="stylesheet">
+</head>
+<style>
+    
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+header {
+    text-align: center;
+    background-color: navy;
+    color: white;
+    padding: 15px;
+    font-size: 24px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+table {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+caption {
+    font-size: 22px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+input {
+    padding: 8px;
+    margin: 5px;
+}
+
+.buttons {
+    text-align: center;
+}
+
+input[type="submit"] {
+    background-color: navy;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="reset"] {
+    cursor: pointer;
+}
+
+</style>
+<body>
+
+    <header>log in </header>
+
+    <main>
+        <form action="http://samim.com/user/get.php" method="post">
+            <table>
+                <caption>Login Form</caption>
+
+                <tr>
+                    <td><label for="loginid">Login ID</label></td>
+                    <td>
+                        <input type="text" id="loginid" name="loginid"
+                        placeholder="Enter Login ID" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="passid">Password</label></td>
+                    <td>
+                        <input type="password" id="passid" name="password"
+                        placeholder="Enter password" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" class="buttons">
+                        <input type="submit" value="Login">
+                        <input type="reset" value="Reset">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </main>
+
+</body>
+</html>
