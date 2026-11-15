@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<script>
+
+// JS using DOM :- document object Model
+// confirm is a built-in function and its boolean function (which return true or false)
+
+/*
+variable :- a storage location in Ram/ Symbolic Rep. of Ram
+Data type :-
+String variable
+
+var username = "Ravi"
+
+// numeric / Number Variable
+var age = 20
+
+// boolean variable
+var married = true
+
+// Rules for naming variable
+
+1. Variable name must start with alphabet or _ followed by number
+   eg:
+       var cname = "ABC Ltd"
+       var _datacharges = 4000
+
+2. No Special Character can be used while naming variable
+   ,? !% &
+
+3. Variable name can be small or large,
+       var m = 200
+       var student_marks = 2000
+
+4. Variable name cannot be keyword of JavaScript
+   wrong :
+       var var = 10
+       document="48858#"
+
+*/
+
+document.title = "JavaScript"
+
+var ans = confirm("Want to Change background color.....?")
+//alert(ans) == is a comparison operator
+
+if(ans == true)
+{
+    var uans = prompt("Enter Color Name...","cyan")
+    document.bgColor = uans;
+}
+else
+{
+    alert("background color will not...change")
+}
+
+</script>
+
+</body>
+</html>
