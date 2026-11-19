@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <style>
+        .pic
+        {
+            border-radius:20px;
+            margin:40px;
+            cursor:pointer;
+            transition:0.50s;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<script>
+
+// Creating Tage (element) in JavaScript
+
+var p = document.createElement("img")
+document.body.appendChild(p)
+
+p.src = "images/p1.jpg"
+p.style.height = "150px"
+p.style.width = "30%"
+p.style.boxShadow = "10px 10px 10px gray"
+p.className = "pic"
+
+// Event Handling
+
+p.onclick = function()
+{
+    p.src = "images/p2.jpg"
+}
+
+p.onmouseout = function()
+{
+    this.src = "images/p1.jpg"
+    this.style.transform = "scale(1)"
+    this.style.borderRadius = "20px"
+    document.bgColor = "white"
+}
+
+p.onmouseover = function()
+{
+    this.style.transform = "scale(1.50)"
+    this.style.borderRadius = "100px"
+    document.bgColor = "black"
+}
+
+document.title = "Ready"
+
+</script>
+
+</body>
+</html>
