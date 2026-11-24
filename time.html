@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Date Class in JavaScript</h1>
+
+    <div id="c1">Time</div>
+
+    <script>
+
+        /* Date is a Class in JavaScript i.e. its Data Type */
+
+        /* Creating Instance of Date class */
+
+        var d = new Date()
+
+        //alert(d)
+        //alert(d.getTime())
+        //alert(d.toLocaleTimeString())
+        //alert(d.toLocaleString())
+
+        var c = document.getElementById("c1")
+
+        c.innerHTML = d.toLocaleTimeString()
+        c.style.color = "red"
+        c.style.fontSize = "50px"
+        c.style.fontFamily = "Arial Black"
+        c.style.background = "yellow"
+        c.style.boxShadow = "10px 10px 10px gray"
+        c.style.display = "inline-block"
+        c.style.padding = "20px"
+
+    </script>
+
+</body>
+
+</html>
