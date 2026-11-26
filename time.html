@@ -38,6 +38,21 @@
             font-size: 16px;
             margin-top: 30px;
         }
+
+        button {
+            background: #facc15;
+            color: #101827;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        button:hover {
+            background: white;
+        }
     </style>
 
 </head>
@@ -47,13 +62,27 @@
     <h1>Digital Clock</h1>
     <div id="c1">Time</div>
     <p>JavaScript Date Class</p>
-
+    <button onclick="startclock()">Start clock</button>
+    <button onclick="stopclock()">Stop clock</button>
     <script>
 
-        var d = new Date()
-        var c = document.getElementById("c1")
-        c.innerHTML = d.toLocaleTimeString()
-        c.style.display = "inline-block"
+
+        function show() {
+            var d = new Date()
+            var c = document.getElementById("c1")
+            c.innerHTML = d.toLocaleTimeString()
+            c.style.display = "inline-block"
+        }
+
+
+
+        var d
+        function startclock() {
+            c = setInterval(show, 1000)
+        }
+        function stopclock() {
+            clearInterval(c)
+        }
 
     </script>
 
